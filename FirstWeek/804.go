@@ -13,7 +13,6 @@ func main() {
 	ss = append(ss, "msg")
 	ss = append(ss, "ggg")
 	ss = append(ss, "qq")
-	fmt.Println("ss len: ", len(ss))
 	fmt.Println(uniqueMorseRepresentations(ss))
 }
 
