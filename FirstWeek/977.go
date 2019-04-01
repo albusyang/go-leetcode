@@ -14,13 +14,13 @@ func main() {
 }
 
 func sortedSquares(A []int) []int {
-	air := make([]int, 0)
+	arr := make([]int, 0)
 	for _, v := range A {
 		v *= v
 		fmt.Println(v)
-		air = append(air, v)
+		arr = append(arr, v)
 	}
-	sort.Ints(air)
+	sort.Ints(arr)
 	
-    return air
+    return arr
 }
