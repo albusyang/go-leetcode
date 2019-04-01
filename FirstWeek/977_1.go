@@ -20,7 +20,7 @@ func sortedSquares(A []int) []int {
 		arr = append(arr, v)
 	}
 	// sort.Ints(arr)
-	quickSort(arr, 0, len(arr) - 1)
+	quickSort(arr, 0, len(arr)-1)
 
 	return arr
 }
@@ -36,7 +36,7 @@ func bubleSort(arr []int) {
 }
 
 func quickSort(arr []int, a, b int) {
-	if a > b {
+	if a >= b {
 		return
 	}
 	c := a
