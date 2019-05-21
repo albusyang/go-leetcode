@@ -21,7 +21,6 @@ func sortedSquares(A []int) []int {
 	}
 	// sort.Ints(arr)
 	quickSort(arr, 0, len(arr)-1)
-
 	return arr
 }
 
