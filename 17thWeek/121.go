@@ -8,11 +8,12 @@ func main() {
 
 func maxProfit(prices []int) int {
 	result := 0
-	
 	for i := 0; i < len(prices); i++ {
 		profit := 0
 		for j := i+1; j < len(prices); j++ {
-			
+            if prices[i] > prices[j] {
+                break
+            }
 			if prices[j]-prices[i] > profit {
 				profit = prices[j]-prices[i]
 			}
@@ -21,6 +22,5 @@ func maxProfit(prices []int) int {
 			result = profit
 		}
 	}
-	
 	return result
 }
