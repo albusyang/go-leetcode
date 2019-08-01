@@ -22,9 +22,7 @@ func levelOrder(root *TreeNode) [][]int {
 		return result
 	}
 	
-	result = collect(0, result, root)
-	
-	return result
+	return collect(0, result, root)
 }
 
 func collect(layer int, result [][]int, node *TreeNode) [][]int{
