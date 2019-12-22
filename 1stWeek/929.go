@@ -10,15 +10,13 @@ func main() {
 }
 
 func numUniqueEmails(emails []string) int {
-	emailList := make([]string, 0)
+    emailMap := make(map[string]int)
 	for _, v := range emails {
 		meetAt := false
 		meetPlus := false
 		emailAddr := ""
 		for _, ev := range v {
-			//fmt.Println("ev: ", ev)
 			if meetAt {
-				//fmt.Println("meet @ ", ev)
 				emailAddr += string(ev)
 			} else {
 				if ev == 64 {
@@ -40,21 +38,13 @@ func numUniqueEmails(emails []string) int {
 				}
 			}
 		}
-		if len(emailList) == 0 {
-			emailList = append(emailList, emailAddr)
-		} else {
-			exist := false
-			for _, em := range emailList {
-				if em == emailAddr {
-					//fmt.Println("em: ", em, " emailAddr: ", emailAddr)
-					exist = true
-				}
-			}
-			if !exist {
-				emailList = append(emailList, emailAddr)
-			}
-		}
+
+        _, ok := emailMap[emailAddr]
+        if ok {
+            continue
+        } else {
+            emailMap[emailAddr] = 1
+        }
 	}
-	//fmt.Println(emailList)
-	return len(emailList)
+	return len(emailMap)
 }

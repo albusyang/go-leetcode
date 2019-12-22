@@ -25,7 +25,7 @@ func uniqueMorseRepresentations(words []string) int {
 		mIndex++
 	}
 
-	wMorse := make([]string, 0)
+	wMorse := make(map[string]int)
 
 	for _, vw := range words {
 		inMorse := ""
@@ -33,19 +33,12 @@ func uniqueMorseRepresentations(words []string) int {
 			inMorse = inMorse + morseMap[int(vs)]
 		}
 
-		if len(wMorse) == 0 {
-			wMorse = append(wMorse, inMorse)
-		} else {
-			flag := false
-			for _, vwm := range wMorse {
-				if vwm == inMorse {
-					flag = true
-				}
-			}
-			if flag == false {
-				wMorse = append(wMorse, inMorse)
-			}
-		}
+        _, ok := wMorse[inMorse]
+        if ok {
+            continue
+        } else {
+            wMorse[inMorse] = 1
+        }
 	}
 	return len(wMorse)
 }

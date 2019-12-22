@@ -16,15 +16,14 @@ func sortedSquares(A []int) []int {
 	arr := make([]int, 0)
 	for _, v := range A {
 		v *= v
-		fmt.Println(v)
 		arr = append(arr, v)
 	}
-	// sort.Ints(arr)
+	// bubbleSort(arr)
 	quickSort(arr, 0, len(arr)-1)
 	return arr
 }
 
-func bubleSort(arr []int) {
+func bubbleSort(arr []int) {
 	for i := 0; i < len(arr); i++ {
 		for j := 1; j < len(arr)-i; j++ {
 			if arr[j-1] > arr[j] {

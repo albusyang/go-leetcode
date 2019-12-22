@@ -9,12 +9,12 @@ func main() {
 }
 
 func toLowerCase(str string) string {
-	lstr := ""
-    for _, v := range str {
+	var res []byte
+	for _, v := range str {
 		if v < 91 && v > 64{
 			v += 32
 		}
-		lstr = lstr + string(v)
+		res = append(res, byte(v))
 	}
-	return lstr
+	return string(res)
 } 

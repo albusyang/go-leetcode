@@ -17,7 +17,6 @@ func sortedSquares(A []int) []int {
 	arr := make([]int, 0)
 	for _, v := range A {
 		v *= v
-		fmt.Println(v)
 		arr = append(arr, v)
 	}
 	sort.Ints(arr)
