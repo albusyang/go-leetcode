@@ -31,7 +31,7 @@ func toLowerCase(str string) string {
 
 ### 结果快照
 
-![709-0](.\img\709-0.png)
+![709-0](./img/709-0.png)
 
 ## 771 
 
@@ -59,7 +59,7 @@ func numJewelsInStones(J string, S string) int {
 
 ### 结果快照
 
-![771-0](.\img\771-0.png)
+![771-0](./img/771-0.png)
 
 
 
@@ -104,7 +104,7 @@ func uniqueMorseRepresentations(words []string) int {
 
 ### 结果快照
 
-![804-0](.\img\804-0.png)
+![804-0](./img/804-0.png)
 
 ## 929
 
@@ -195,7 +195,7 @@ func numUniqueEmails(emails []string) int {
 
 ### 结果快照
 
-![929-0](.\img\929-0.png)
+![929-0](./img/929-0.png)
 
 
 
@@ -268,11 +268,11 @@ func quickSort(arr []int, a, b int) {
 
 > 可以看到用**sort**包最快，其次是快速排序，最差是冒泡排序。有趣的地方在于，无论哪一种都比六（九）个月前快了很多，内存占用也减少了。可能和Golang（最后一次测试基于1.10.3）版本升级或者是他们的服务器硬件升级有关。
 
-![977-0](.\img\977-0.png)
+![977-0](./img/977-0.png)
 
 
 
-![977-1](.\img\977-1.png)
+![977-1](./img/977-1.png)
 
 
 
