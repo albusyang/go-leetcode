@@ -246,4 +246,4 @@ func sortArrayByParityII(A []int) []int {
 
 ### 结果快照
 
-![image-20191231202833059](C:\Users\albus\go\src\lab\leetcode\week_2\img\922-1.png)
+![922-1](./img/922-1.png)
